@@ -14,8 +14,7 @@ tasks:
   - name: YugabyteDB Shell
     command: |
       gp await-port 5433
-      ysqlsh
-      \i /data/init.sql
+      ysqlsh -f /data/init.sql
     openMode: split-right  
 
 

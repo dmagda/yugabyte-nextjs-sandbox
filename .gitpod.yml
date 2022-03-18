@@ -11,10 +11,11 @@ tasks:
     command: npm run dev
     openMode: split-left
 
-  - name: YugabyteDB SQL Shell
+  - name: YugabyteDB Shell
     command: |
       gp await-port 5433
       ysqlsh
+      \i /data/init.sql
     openMode: split-right  
 
 

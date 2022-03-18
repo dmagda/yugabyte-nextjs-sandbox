@@ -21,11 +21,11 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Account[] | string>
 ) {
-  // open connection to the local node
+  // open connection to the local YugabyteDB node
   const client = new Client(config);
   await client.connect();
 
-  // query and return all Accounts
+  // query all Accounts stored in YugabyteDB
   await client.query('SELECT name, age, country, balance FROM Account', 
     (err: Error, result: QueryResult<Account>) => {
         if (err)

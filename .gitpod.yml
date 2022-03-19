@@ -8,15 +8,11 @@ image:
 tasks:
   - name: Next.js Dev
     init: npm instal
-    command: >
-      npm run dev
-      gp sync-done nextjs
-    openMode: split-left
+    command: npm run dev
 
   - name: YugabyteDB Shell
-    init: gp sync-await nextjs
+    init: gp await-port 5433
     command: |
-      gp await-port 5433
       ysqlsh -f /data/init.sql
       ysqlsh
     openMode: split-right  

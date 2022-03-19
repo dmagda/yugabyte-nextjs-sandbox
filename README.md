@@ -57,5 +57,10 @@ Test the Next.js API endpoint:
 
 2. Confirm the API returned the following JSON:
 
+    ```shell
+    [{"name":"Jessica","age":28,"country":"USA","balance":10000},
+    {"name":"John","age":28,"country":"Canada","balance":9000}]
+    ```
+
 
 

@@ -53,7 +53,7 @@ Execute SQL queries via `ysqlsh`:
 
 Test the Next.js API endpoint:
 
-1. Open [http://localhost:3000/api/accounts](http://localhost:3000/api/accounts).
+1. Open [http://localhost:3000/api/accounts](http://localhost:3000/api/accounts) or [http://<public_url_of_your_gitpod_workspace>/api/accounts](http://<public_url_of_your_gitpod_workspace>/api/accounts).
 
 2. Confirm the API returned the following JSON:
 

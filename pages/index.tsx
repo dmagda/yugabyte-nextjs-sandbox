@@ -24,7 +24,7 @@ const Home: NextPage = () => {
 
         <p className={styles.description}>
             Test and modify the API endpoint that connects to YugabyteDB 
-            and queries sample data - <a href="http://localhost:3000/api/accounts">http://localhost:3000/api/accounts</a>
+            and queries sample data - <a href="/api/accounts">/api/accounts</a>
         </p>
       </main>
 

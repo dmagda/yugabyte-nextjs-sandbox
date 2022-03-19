@@ -16,9 +16,46 @@ The Next.js project includes an API endpoint - `pages/api/accounts.ts` - that co
 
 ## Play With Sandbox
 
+Execute SQL queries via `ysqlsh`:
 
+1. Open the `YugabyteDB Shell` tab that has an active `ysqlsh` connection to the YugabyteDB instance.
 
+2. Confirm the `Account` table exists:
+    ```shell
+    \d
+    ```
 
+    The output should be as follows:
+
+    ```shell
+    List of relations
+    Schema |  Name   | Type  |  Owner   
+    --------+---------+-------+----------
+    public | account | table | yugabyte
+    (1 row)
+    ```
+
+3. Get all `Accounts`:
+
+    ```shell
+    select * from Account;
+    ```
+
+    The output should be as follows:
+
+    ```shell
+    id |  name   | age | country | balance 
+    ----+---------+-----+---------+---------
+    1 | Jessica |  28 | USA     |   10000
+    2 | John    |  28 | Canada  |    9000
+    (2 rows)
+    ```
+
+Test the Next.js API endpoint:
+
+1. Open [http://localhost:3000/api/accounts](http://localhost:3000/api/accounts).
+
+2. Confirm the API returned the following JSON:
 
 
 
